@@ -1,215 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>NITRO CHETS</title>
+<title>NITRO LOGIN</title>
 
 <style>
-
 body{
-
-margin:0;
-height:100vh;
-
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.95)),
-url("https://img2.tapimg.net/post/images/FspWmvAc3GuS0jQ_uQIQa6ypZBSv.jpg?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/strip/meta-keep-list/VXNlckNvbW1lbnQ%3D/ignore-error/1&t=1");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-font-family:Arial;
-color:white;
-
+    margin:0;
+    height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+    color:white;
 }
-
 
 .panel{
-
-width:400px;
-
-padding:40px;
-
-background:rgba(10,10,10,.75);
-
-backdrop-filter:blur(15px);
-
-border:1px solid rgba(255,255,255,.2);
-
-border-radius:20px;
-
-text-align:center;
-
-box-shadow:0 0 40px black;
-
+    width:350px;
+    padding:40px;
+    background:#111;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 30px red;
 }
-
 
 .logo{
-
-font-size:55px;
-
-font-weight:900;
-
-letter-spacing:8px;
-
-color:#ff0033;
-
-text-shadow:0 0 20px red;
-
+    font-size:50px;
+    font-weight:bold;
+    color:red;
 }
-
-
-h2{
-
-letter-spacing:4px;
-
-}
-
 
 input{
-
-width:90%;
-
-padding:15px;
-
-margin-top:20px;
-
-background:#111;
-
-color:white;
-
-border:1px solid #ff0033;
-
-border-radius:10px;
-
-font-size:16px;
-
+    width:90%;
+    padding:15px;
+    margin:15px 0;
+    background:#222;
+    color:white;
+    border:1px solid red;
+    border-radius:10px;
 }
-
 
 button{
-
-width:100%;
-
-padding:15px;
-
-margin-top:15px;
-
-background:#ff0033;
-
-color:white;
-
-border:none;
-
-border-radius:10px;
-
-font-weight:bold;
-
-cursor:pointer;
-
+    width:100%;
+    padding:15px;
+    background:red;
+    color:white;
+    border:0;
+    border-radius:10px;
+    cursor:pointer;
 }
-
 
 button:hover{
-
-background:white;
-
-color:black;
-
+    background:white;
+    color:black;
 }
-
 
 #msg{
-
-margin-top:20px;
-
-font-size:18px;
-
+    margin-top:15px;
 }
-
-
 </style>
 
 </head>
 
-
 <body>
-
 
 <div class="panel">
 
+<div class="logo">NITRO</div>
 
-<div class="logo">
-NITRO
-</div>
+<h2>LICENSE LOGIN</h2>
 
+<input id="key" placeholder="ENTER KEY">
 
-<h2>CHETS</h2>
-
-
-<p>LICENSE VERIFICATION</p>
-
-
-<input id="key" placeholder="ENTER LICENSE KEY">
-
-
-<button onclick="checkKey()">
-VERIFY
-</button>
-
+<button onclick="login()">LOGIN</button>
 
 <p id="msg"></p>
 
-
 </div>
-
 
 
 <script>
 
+function login(){
 
-function checkKey(){
+let key = document.getElementById("key").value;
 
-
-let key=document.getElementById("key").value;
-
-
-if(key=="NITRO-2026"){
-
+if(key === "NITRO-2026"){
 
 document.getElementById("msg").innerHTML =
-"LICENSE VERIFIED";
+"LOGIN SUCCESS";
 
-
-setTimeout(function(){
-
+setTimeout(()=>{
 
 window.location.href =
 "https://www.mediafire.com/file/5oktmaq3112tdbk/Nitro_Gaming_Free.rar/file";
 
-
 },1000);
 
 
-}
-
-else{
-
+}else{
 
 document.getElementById("msg").innerHTML =
-"INVALID KEY";
-
-
-}
-
+"WRONG KEY";
 
 }
 
+}
 
 </script>
 
