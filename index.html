@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>License Login</title>
+
+<style>
+
+body{
+    background: linear-gradient(135deg,#111,#333);
+    color:white;
+    font-family:Arial;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box{
+
+    background:#222;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    width:300px;
+    box-shadow:0 0 20px black;
+
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+input{
+
+    width:90%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    margin-bottom:15px;
+
+}
+
+button{
+
+    width:100%;
+    padding:12px;
+    background:#00ff88;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
+button:hover{
+
+    background:#00cc66;
+
+}
+
+#msg{
+
+    margin-top:15px;
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<h1>License Login</h1>
+
+<div class="box">
+
+<h2>🔐 License Login</h2>
 
 <input id="key" placeholder="Enter License Key">
 
@@ -14,20 +83,149 @@
 
 <p id="msg"></p>
 
+</div>
+
+
+
 <script>
+
 function login(){
 
 let key = document.getElementById("key").value;
 
-if(key == "12345"){
-    document.getElementById("msg").innerHTML = "Login Success ✅";
-}
-else{
-    document.getElementById("msg").innerHTML = "Wrong License Key ❌";
-}
+
+if(key=="12345"){
+
+document.getElementById("msg").innerHTML="Login Success ✅";
 
 }
+
+else{
+
+document.getElementById("msg").innerHTML="Wrong License Key ❌";
+
+}
+
+
+}
+
 </script>
+
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+
+<title>License Login</title>
+
+<style>
+
+body{
+    background: linear-gradient(135deg,#111,#333);
+    color:white;
+    font-family:Arial;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box{
+
+    background:#222;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    width:300px;
+    box-shadow:0 0 20px black;
+
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+input{
+
+    width:90%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    margin-bottom:15px;
+
+}
+
+button{
+
+    width:100%;
+    padding:12px;
+    background:#00ff88;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
+button:hover{
+
+    background:#00cc66;
+
+}
+
+#msg{
+
+    margin-top:15px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+<h2>🔐 License Login</h2>
+
+<input id="key" placeholder="Enter License Key">
+
+<button onclick="login()">Login</button>
+
+<p id="msg"></p>
+
+</div>
+
+
+
+<script>
+
+function login(){
+
+let key = document.getElementById("key").value;
+
+
+if(key=="12345"){
+
+document.getElementById("msg").innerHTML="Login Success ✅";
+
+}
+
+else{
+
+document.getElementById("msg").innerHTML="Wrong License Key ❌";
+
+}
+
+
+}
+
+</script>
+
 
 </body>
 </html>
