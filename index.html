@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>FPS License Panel</title>
+<title>FPS Access</title>
 
 <style>
 
@@ -11,8 +11,8 @@ body{
     height:100vh;
 
     background:
-    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.9)),
-    url("https://images.unsplash.com/photo-1560253023-3ec5d502959f");
+    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
 
     background-size:cover;
     background-position:center;
@@ -28,82 +28,108 @@ body{
 
 .panel{
 
-    width:360px;
-    padding:35px;
+    width:380px;
+    padding:40px;
 
-    background:rgba(15,15,15,0.9);
+    background:rgba(10,10,10,.9);
 
-    border:2px solid #ff3030;
+    border:2px solid red;
 
     border-radius:15px;
 
     text-align:center;
 
-    box-shadow:0 0 25px #ff3030;
+    box-shadow:0 0 30px red;
 
 }
 
 
 h1{
 
-    color:#ff3030;
-    letter-spacing:3px;
+color:red;
+letter-spacing:4px;
 
 }
 
 
 input{
 
-    width:90%;
-    padding:14px;
+width:90%;
+padding:15px;
 
-    background:#111;
+background:#111;
+color:white;
 
-    color:white;
-
-    border:1px solid #ff3030;
-
-    border-radius:8px;
-
-    margin:15px 0;
+border:1px solid red;
+border-radius:8px;
 
 }
 
 
 button{
 
-    width:100%;
+margin-top:15px;
 
-    padding:14px;
+width:100%;
+padding:15px;
 
-    background:#ff3030;
+background:red;
 
-    color:white;
+color:white;
 
-    border:none;
+border:none;
 
-    border-radius:8px;
+border-radius:8px;
 
-    font-weight:bold;
+font-weight:bold;
 
-    cursor:pointer;
-
-}
-
-
-button:hover{
-
-    background:white;
-    color:black;
+cursor:pointer;
 
 }
 
 
-#msg{
+.loading{
 
-    margin-top:20px;
+display:none;
+
+margin-top:20px;
 
 }
+
+
+.bar{
+
+width:100%;
+height:10px;
+
+background:#333;
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+
+.progress{
+
+height:100%;
+width:0%;
+
+background:red;
+
+animation:load 3s forwards;
+
+}
+
+
+@keyframes load{
+
+from{width:0%;}
+to{width:100%;}
+
+}
+
 
 </style>
 
@@ -115,15 +141,27 @@ button:hover{
 
 <div class="panel">
 
+
 <h1>FPS ACCESS</h1>
 
-<p>LICENSE VERIFICATION</p>
+<p>LICENSE CHECK</p>
 
 
 <input id="key" placeholder="ENTER KEY">
 
 
-<button onclick="login()">ENTER</button>
+<button onclick="login()">START</button>
+
+
+<div class="loading" id="loading">
+
+<p>Initializing System...</p>
+
+<div class="bar">
+<div class="progress"></div>
+</div>
+
+</div>
 
 
 <p id="msg"></p>
@@ -142,13 +180,23 @@ let key=document.getElementById("key").value;
 
 if(key=="12345"){
 
-document.getElementById("msg").innerHTML="ACCESS GRANTED ✅";
+document.getElementById("loading").style.display="block";
+
+
+setTimeout(()=>{
+
+document.getElementById("msg").innerHTML=
+"READY TO LAUNCH ✅";
+
+},3000);
+
 
 }
 
 else{
 
-document.getElementById("msg").innerHTML="INVALID KEY ❌";
+document.getElementById("msg").innerHTML=
+"INVALID KEY ❌";
 
 }
 
