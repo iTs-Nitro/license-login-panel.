@@ -2,71 +2,70 @@
 <html>
 <head>
 
-<title>License Login</title>
+<title>FPS License Panel</title>
 
 <style>
 
-*{
-    box-sizing:border-box;
-}
-
 body{
+    margin:0;
+    height:100vh;
 
     background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.85)),
-    url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1560253023-3ec5d502959f");
 
     background-size:cover;
     background-position:center;
 
-    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
 
     font-family:Arial;
     color:white;
-
 }
 
 
-.box{
+.panel{
 
-    background:rgba(20,20,20,0.9);
+    width:360px;
+    padding:35px;
 
-    width:350px;
+    background:rgba(15,15,15,0.9);
 
-    padding:40px;
+    border:2px solid #ff3030;
 
-    border-radius:20px;
+    border-radius:15px;
 
     text-align:center;
 
-    box-shadow:0 0 30px black;
+    box-shadow:0 0 25px #ff3030;
 
 }
 
 
 h1{
 
-    margin-bottom:25px;
+    color:#ff3030;
+    letter-spacing:3px;
 
 }
 
 
 input{
 
-    width:100%;
+    width:90%;
+    padding:14px;
 
-    padding:15px;
+    background:#111;
 
-    border-radius:10px;
+    color:white;
 
-    border:none;
+    border:1px solid #ff3030;
 
-    margin-bottom:15px;
+    border-radius:8px;
 
-    font-size:16px;
+    margin:15px 0;
 
 }
 
@@ -75,15 +74,15 @@ button{
 
     width:100%;
 
-    padding:15px;
+    padding:14px;
+
+    background:#ff3030;
+
+    color:white;
 
     border:none;
 
-    border-radius:10px;
-
-    background:#00ff88;
-
-    font-size:16px;
+    border-radius:8px;
 
     font-weight:bold;
 
@@ -94,7 +93,8 @@ button{
 
 button:hover{
 
-    background:#00cc66;
+    background:white;
+    color:black;
 
 }
 
@@ -103,10 +103,7 @@ button:hover{
 
     margin-top:20px;
 
-    font-size:18px;
-
 }
-
 
 </style>
 
@@ -116,15 +113,17 @@ button:hover{
 <body>
 
 
-<div class="box">
+<div class="panel">
 
-<h1>🔐 License Login</h1>
+<h1>FPS ACCESS</h1>
+
+<p>LICENSE VERIFICATION</p>
 
 
-<input id="key" placeholder="Enter License Key">
+<input id="key" placeholder="ENTER KEY">
 
 
-<button onclick="login()">LOGIN</button>
+<button onclick="login()">ENTER</button>
 
 
 <p id="msg"></p>
@@ -138,21 +137,20 @@ button:hover{
 
 function login(){
 
-let key = document.getElementById("key").value;
+let key=document.getElementById("key").value;
 
 
 if(key=="12345"){
 
-document.getElementById("msg").innerHTML="Login Success ✅";
+document.getElementById("msg").innerHTML="ACCESS GRANTED ✅";
 
 }
 
 else{
 
-document.getElementById("msg").innerHTML="Wrong License Key ❌";
+document.getElementById("msg").innerHTML="INVALID KEY ❌";
 
 }
-
 
 }
 
