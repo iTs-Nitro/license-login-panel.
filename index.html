@@ -6,52 +6,91 @@
 
 <style>
 
+*{
+    box-sizing:border-box;
+}
+
 body{
-    background: linear-gradient(135deg,#111,#333);
-    color:white;
-    font-family:Arial;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.85)),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
+
+    background-size:cover;
+    background-position:center;
+
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+
+    font-family:Arial;
+    color:white;
+
 }
+
 
 .box{
 
-    background:#222;
+    background:rgba(20,20,20,0.9);
+
+    width:350px;
+
     padding:40px;
-    border-radius:15px;
+
+    border-radius:20px;
+
     text-align:center;
-    width:300px;
-    box-shadow:0 0 20px black;
+
+    box-shadow:0 0 30px black;
 
 }
 
-h2{
-    margin-bottom:20px;
+
+h1{
+
+    margin-bottom:25px;
+
 }
+
 
 input{
 
-    width:90%;
-    padding:12px;
+    width:100%;
+
+    padding:15px;
+
+    border-radius:10px;
+
     border:none;
-    border-radius:8px;
+
     margin-bottom:15px;
 
+    font-size:16px;
+
 }
+
 
 button{
 
     width:100%;
-    padding:12px;
-    background:#00ff88;
+
+    padding:15px;
+
     border:none;
-    border-radius:8px;
-    cursor:pointer;
+
+    border-radius:10px;
+
+    background:#00ff88;
+
+    font-size:16px;
+
     font-weight:bold;
 
+    cursor:pointer;
+
 }
+
 
 button:hover{
 
@@ -59,11 +98,15 @@ button:hover{
 
 }
 
+
 #msg{
 
-    margin-top:15px;
+    margin-top:20px;
+
+    font-size:18px;
 
 }
+
 
 </style>
 
@@ -75,128 +118,17 @@ button:hover{
 
 <div class="box">
 
-<h2>🔐 License Login</h2>
+<h1>🔐 License Login</h1>
+
 
 <input id="key" placeholder="Enter License Key">
 
-<button onclick="login()">Login</button>
+
+<button onclick="login()">LOGIN</button>
+
 
 <p id="msg"></p>
 
-</div>
-
-
-
-<script>
-
-function login(){
-
-let key = document.getElementById("key").value;
-
-
-if(key=="12345"){
-
-document.getElementById("msg").innerHTML="Login Success ✅";
-
-}
-
-else{
-
-document.getElementById("msg").innerHTML="Wrong License Key ❌";
-
-}
-
-
-}
-
-</script>
-
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-
-<title>License Login</title>
-
-<style>
-
-body{
-    background: linear-gradient(135deg,#111,#333);
-    color:white;
-    font-family:Arial;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.box{
-
-    background:#222;
-    padding:40px;
-    border-radius:15px;
-    text-align:center;
-    width:300px;
-    box-shadow:0 0 20px black;
-
-}
-
-h2{
-    margin-bottom:20px;
-}
-
-input{
-
-    width:90%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    margin-bottom:15px;
-
-}
-
-button{
-
-    width:100%;
-    padding:12px;
-    background:#00ff88;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-
-}
-
-button:hover{
-
-    background:#00cc66;
-
-}
-
-#msg{
-
-    margin-top:15px;
-
-}
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<div class="box">
-
-<h2>🔐 License Login</h2>
-
-<input id="key" placeholder="Enter License Key">
-
-<button onclick="login()">Login</button>
-
-<p id="msg"></p>
 
 </div>
 
