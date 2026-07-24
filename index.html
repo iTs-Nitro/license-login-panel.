@@ -2,68 +2,31 @@
 <html>
 <head>
 <title>License Login</title>
-
-<style>
-body{
-    background:#111;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-    margin-top:100px;
-}
-
-.box{
-    background:#222;
-    padding:30px;
-    border-radius:10px;
-    display:inline-block;
-}
-
-input,button{
-    padding:10px;
-    margin:10px;
-}
-</style>
-
 </head>
 
 <body>
 
-<div class="box">
-
-<h2>License Login</h2>
+<h1>License Login</h1>
 
 <input id="key" placeholder="Enter License Key">
-
-<br>
 
 <button onclick="login()">Login</button>
 
 <p id="msg"></p>
 
-</div>
-
-
 <script>
-
 function login(){
 
-let key = document.getElementById("key").value;
+var key = document.getElementById("key").value;
 
-if(key=="NITRO-9999"){
-
-document.getElementById("msg").innerHTML="Login Success ✅";
-
+if(key === "NITRO-12345"){
+    document.getElementById("msg").innerHTML = "Login Success ✅";
 }
-
 else{
-
-document.getElementById("msg").innerHTML="Wrong License Key ❌";
-
+    document.getElementById("msg").innerHTML = "Wrong License Key ❌";
 }
 
 }
-
 </script>
 
 </body>
