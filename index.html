@@ -2,51 +2,70 @@
 <html>
 <head>
 
-<title>FPS Access</title>
+<title>NITRO CHETS</title>
 
 <style>
 
 body{
-    margin:0;
-    height:100vh;
 
-    background:
-    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
-    url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
+margin:0;
+height:100vh;
 
-    background-size:cover;
-    background-position:center;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.95)),
+url("https://img2.tapimg.net/post/images/FspWmvAc3GuS0jQ_uQIQa6ypZBSv.jpg?imageMogr2/thumbnail/720x9999%3E/quality/80/format/jpg/interlace/1/strip/meta-keep-list/VXNlckNvbW1lbnQ%3D/ignore-error/1&t=1");
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+background-size:cover;
+background-position:center;
 
-    font-family:Arial;
-    color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-family:Arial;
+color:white;
+
 }
 
 
 .panel{
 
-    width:380px;
-    padding:40px;
+width:400px;
 
-    background:rgba(10,10,10,.9);
+padding:40px;
 
-    border:2px solid red;
+background:rgba(10,10,10,.75);
 
-    border-radius:15px;
+backdrop-filter:blur(15px);
 
-    text-align:center;
+border:1px solid rgba(255,255,255,.2);
 
-    box-shadow:0 0 30px red;
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 0 40px black;
 
 }
 
 
-h1{
+.logo{
 
-color:red;
+font-size:55px;
+
+font-weight:900;
+
+letter-spacing:8px;
+
+color:#ff0033;
+
+text-shadow:0 0 20px red;
+
+}
+
+
+h2{
+
 letter-spacing:4px;
 
 }
@@ -55,31 +74,39 @@ letter-spacing:4px;
 input{
 
 width:90%;
+
 padding:15px;
 
+margin-top:20px;
+
 background:#111;
+
 color:white;
 
-border:1px solid red;
-border-radius:8px;
+border:1px solid #ff0033;
+
+border-radius:10px;
+
+font-size:16px;
 
 }
 
 
 button{
 
-margin-top:15px;
-
 width:100%;
+
 padding:15px;
 
-background:red;
+margin-top:15px;
+
+background:#ff0033;
 
 color:white;
 
 border:none;
 
-border-radius:8px;
+border-radius:10px;
 
 font-weight:bold;
 
@@ -88,45 +115,20 @@ cursor:pointer;
 }
 
 
-.loading{
+button:hover{
 
-display:none;
+background:white;
+
+color:black;
+
+}
+
+
+#msg{
 
 margin-top:20px;
 
-}
-
-
-.bar{
-
-width:100%;
-height:10px;
-
-background:#333;
-
-border-radius:10px;
-
-overflow:hidden;
-
-}
-
-
-.progress{
-
-height:100%;
-width:0%;
-
-background:red;
-
-animation:load 3s forwards;
-
-}
-
-
-@keyframes load{
-
-from{width:0%;}
-to{width:100%;}
+font-size:18px;
 
 }
 
@@ -142,26 +144,23 @@ to{width:100%;}
 <div class="panel">
 
 
-<h1>FPS ACCESS</h1>
-
-<p>LICENSE CHECK</p>
-
-
-<input id="key" placeholder="ENTER KEY">
-
-
-<button onclick="login()">START</button>
-
-
-<div class="loading" id="loading">
-
-<p>Initializing System...</p>
-
-<div class="bar">
-<div class="progress"></div>
+<div class="logo">
+NITRO
 </div>
 
-</div>
+
+<h2>CHETS</h2>
+
+
+<p>LICENSE VERIFICATION</p>
+
+
+<input id="key" placeholder="ENTER LICENSE KEY">
+
+
+<button onclick="checkKey()">
+VERIFY
+</button>
 
 
 <p id="msg"></p>
@@ -173,34 +172,34 @@ to{width:100%;}
 
 <script>
 
-function login(){
+
+function checkKey(){
+
 
 let key=document.getElementById("key").value;
 
 
-if(key=="12345"){
+if(key=="NITRO-2026"){
 
-document.getElementById("loading").style.display="block";
-
-
-setTimeout(()=>{
 
 document.getElementById("msg").innerHTML=
-"READY TO LAUNCH ✅";
-
-},3000);
+"LICENSE VERIFIED";
 
 
 }
 
 else{
 
+
 document.getElementById("msg").innerHTML=
-"INVALID KEY ❌";
+"INVALID KEY";
+
 
 }
 
+
 }
+
 
 </script>
 
