@@ -4,108 +4,188 @@
 <title>NITRO LOGIN</title>
 
 <style>
+
 body{
     margin:0;
     height:100vh;
-    background:#000;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url("https://clan.fastly.steamstatic.com/images/43498579/e36babdccee18377c97175ecb7ea9198edc01fcb.png");
+
+    background-size:cover;
+    background-position:center;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     font-family:Arial;
     color:white;
 }
 
+
 .panel{
+
     width:350px;
     padding:40px;
-    background:#111;
+
+    background:rgba(17,17,17,0.85);
+
     border-radius:20px;
+
     text-align:center;
+
     box-shadow:0 0 30px red;
+
+    backdrop-filter:blur(5px);
+
 }
+
+
 
 .logo{
+
     font-size:50px;
+
     font-weight:bold;
+
     color:red;
+
 }
+
+
 
 input{
+
     width:90%;
+
     padding:15px;
+
     margin:15px 0;
+
     background:#222;
+
     color:white;
+
     border:1px solid red;
+
     border-radius:10px;
+
 }
+
+
 
 button{
+
     width:100%;
+
     padding:15px;
+
     background:red;
+
     color:white;
+
     border:0;
+
     border-radius:10px;
+
     cursor:pointer;
+
+    font-weight:bold;
+
 }
+
+
 
 button:hover{
+
     background:white;
+
     color:black;
+
 }
 
+
+
 #msg{
+
     margin-top:15px;
+
 }
+
 </style>
 
 </head>
 
+
 <body>
+
 
 <div class="panel">
 
+
 <div class="logo">NITRO</div>
+
 
 <h2>LICENSE LOGIN</h2>
 
+
 <input id="key" placeholder="ENTER KEY">
+
 
 <button onclick="login()">LOGIN</button>
 
+
 <p id="msg"></p>
+
 
 </div>
 
 
+
 <script>
+
 
 function login(){
 
+
 let key = document.getElementById("key").value;
 
+
+
 if(key === "NITRO-2026"){
+
 
 document.getElementById("msg").innerHTML =
 "LOGIN SUCCESS";
 
+
 setTimeout(()=>{
 
+
 window.location.href =
-"https://www.mediafire.com/file/5oktmaq3112tdbk/Nitro_Gaming_Free.rar/file";
+"https://www.mediafire.com/folder/5r9m0ytf99pzg/Nitro_V2";
+
 
 },1000);
 
 
-}else{
+
+}
+
+else{
+
 
 document.getElementById("msg").innerHTML =
 "WRONG KEY";
 
-}
 
 }
+
+
+}
+
 
 </script>
 
